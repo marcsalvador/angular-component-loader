@@ -1,0 +1,16 @@
+<div class="jumbotron">
+    <h1 class="display-4">Call the Loader Function</h1>
+    <p class="lead">We can call the function on our parent HTML Template or inside ngAfterViewInit,
+        &lt;ng-template&gt; DOM is not yet available in ngOnInit that is the reason why we need it to call in
+        ngAfterViewInit if you want to show a child component on first load of the website.</p>
+    <hr class="my-4">
+    <p>
+        <strong>Call Loader Function Inside A HTML Template</strong><br>
+        &lt;a (click)="loadChildComponent()"&gt;Load Function Component&lt;/li&gt;
+        <br><br>
+        <strong>Inside ngAfterViewInit</strong><br>
+        ngAfterViewInit(): void &#123;
+        <br>&nbsp;&nbsp;this.loadIntroduction();
+        }&#125;
+    </p>
+</div>

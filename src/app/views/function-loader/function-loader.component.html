@@ -1,0 +1,13 @@
+<div class="jumbotron">
+    <h1 class="display-4">Component Loader Function</h1>
+    <p class="lead">Create a function that will load the component</p>
+    <hr class="my-4">
+    <p>
+        loadChildComponent(): void &#123;
+        <br>&nbsp;&nbsp;if (this.viewContainerRef != null) &#123; this.viewContainerRef.clear(); &#125;
+        <br>&nbsp;&nbsp;const factory = this.componentFactoryResolver.resolveComponentFactory(ChildComponent);
+        <br>&nbsp;&nbsp;const ref = this.viewContainerRef.createComponent(factory);
+        <br>&nbsp;&nbsp;ref.changeDetectorRef.detectChanges();
+        <br>&#125;
+    </p>
+</div>

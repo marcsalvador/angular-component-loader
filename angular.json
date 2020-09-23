@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/load-custom-component",
+            "outputPath": "dist/angular-component-loader",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,9 +28,14 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/scss/bootstrap.scss",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "load-custom-component"
+    }
+  },
+  "defaultProject": "load-custom-component",
+  "cli": {
+    "analytics": false
+  }
 }
